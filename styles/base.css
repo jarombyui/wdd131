@@ -1,6 +1,9 @@
+/* Importar fuente Google Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif; /* Añadir Roboto con Arial como respaldo */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -13,6 +16,7 @@ body {
 h1 {
     color: #23395d;
     margin-bottom: 0;
+    font-weight: bold; /* Usa la fuente Roboto en negrita */
 }
 
 header {
@@ -21,6 +25,7 @@ header {
     color: white;
     padding: 1rem 0;
     text-align: center;
+    font-weight: 700; /* Usa Roboto en negrita */
 }
 
 .highlight {
