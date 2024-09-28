@@ -27,16 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const hamburger = document.querySelector('.hamburger');
-//     const navLinks = document.querySelector('.nav-links');
 
-//     hamburger.addEventListener('click', () => {
-//         navLinks.classList.toggle('show');
-//         hamburger.textContent = navLinks.classList.contains('show') ? '✖' : '☰';
-//     });
-
-//     // Update footer with last modified date
-//     const lastModified = document.getElementById("last-modified");
-//     lastModified.textContent = document.lastModified;
-// });
