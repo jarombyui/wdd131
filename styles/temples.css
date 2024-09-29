@@ -125,7 +125,11 @@ footer p {
 }
 
 /**/
-
+.titlemain{
+    text-align: left;
+    position: relative;
+    left: 20px;
+    }
 
 
 
