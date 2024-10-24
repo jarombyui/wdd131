@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Jarom Campos" content="Temple Album">
+    <title>Products Album</title>
+    <!-- Meta Descriptions -->
+    <meta name="description" content="Submit and review products with ratings and feedback. Provide useful insights about your experience with various products.">
+    <!-- Meta Author -->
+    <meta name="author" content="Jarom Campos">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="titlemain">Products Album</h1>
+        <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="https://jarombyui.github.io/wdd131/">Home</a></li>
+                <li><a href="#" class="filter-btn" data-filter="old">Old</a></li>
+                <li><a href="#" class="filter-btn" data-filter="new">New</a></li>
+                <li><a href="#" class="filter-btn" data-filter="large">Large</a></li>
+                <li><a href="#" class="filter-btn" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Product Search</h2> <!-- Especifica un subtítulo que tenga sentido en este contexto -->
+        
+        <input type="text" id="search" placeholder="Search temples..." />
+    
+        <div class="gallery">
+            <!-- Las tarjetas de templos se generarán aquí dinámicamente -->
+        </div>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🤖🤖 Jarom Campos 🤖🤖 , Lima- Perú</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
+
