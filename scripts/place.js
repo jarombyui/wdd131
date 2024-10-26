@@ -1,32 +1,31 @@
+// Obtener el año actual y la fecha de última modificación
+const yearElement = document.getElementById('year');
+const lastModifiedElement = document.getElementById('lastModified');
+yearElement.textContent = new Date().getFullYear();
+lastModifiedElement.textContent = document.lastModified;
 
+// Sensación térmica
+const tempElement = document.getElementById('temp');
+const windElement = document.getElementById('wind');
+const windChillElement = document.getElementById('windChill');
 
+// Valores estáticos de temperatura y viento
+const temperature = 8; // °C
+const windSpeed = 6; // km/h
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Update current year and last modified date
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentYear").textContent = currentYear;
-    document.getElementById("lastModified").textContent = document.lastModified;
-  
-    // Static temperature and wind speed values
-    const temperature = 5; // Celsius
-    const windSpeed = 20; // km/h
-  
-    // Calculate and display wind chill if applicable
-    const windChillElement = document.getElementById("windChill");
-    const windChill = calculateWindChill(temperature, windSpeed);
-    if (windChill) {
-      windChillElement.textContent = `${windChill.toFixed(1)} °C`;
-    } else {
-      windChillElement.textContent = "N/A";
-    }
-  });
-  
-  // Function to calculate wind chill
-  function calculateWindChill(temp, windSpeed) {
-    // Wind chill formula for Celsius
-    if (temp <= 10 && windSpeed > 4.8) {
-      return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
-    }
-    return null;
+function calculateWindChill(temp, wind) {
+  if (temp <= 10 && wind > 4.8) {
+    return (
+      13.12 +
+      0.6215 * temp -
+      11.37 * Math.pow(wind, 0.16) +
+      0.3965 * temp * Math.pow(wind, 0.16)
+    ).toFixed(1);
+  } else {
+    return 'N/A';
   }
-  
+}
+
+// Calcular y mostrar la sensación térmica
+const windChill = calculateWindChill(temperature, windSpeed);
+windChillElement.textContent = windChill + ' °C';
